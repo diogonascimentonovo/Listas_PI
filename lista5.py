@@ -1,126 +1,74 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyNEEgq2r2EhH284uRDX4qd/"
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "code",
-      "execution_count": 16,
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 582
-        },
-        "id": "UQ0AwTpKy5Zf",
-        "outputId": "a1a0f198-5685-43b6-fff8-9aa72ac3990d"
-      },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Selecione o exercício que deseja rodar: 2\n",
-            "Digite um número100\n",
-            "Digite um número200\n",
-            "Digite um número300\n",
-            "Digite um número400\n",
-            "Digite um número450\n",
-            "Digite um número120\n",
-            "Digite um número140\n",
-            "Digite um número160\n",
-            "Digite um número180\n",
-            "Digite um número190\n",
-            "O maior número é 450 e está na posição 5\n",
-            "O menor número é 100 e está na posição 1\n"
-          ]
-        },
-        {
-          "output_type": "error",
-          "ename": "KeyboardInterrupt",
-          "evalue": "Interrupted by user",
-          "traceback": [
-            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
-            "\u001b[0;32m<ipython-input-16-c1e27448c906>\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     37\u001b[0m }\n\u001b[1;32m     38\u001b[0m \u001b[0;32mwhile\u001b[0m \u001b[0;32mTrue\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 39\u001b[0;31m   \u001b[0mselect\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'Selecione o exercício que deseja rodar: '\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     40\u001b[0m   \u001b[0;32mif\u001b[0m \u001b[0mselect\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mbiblioteca\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     41\u001b[0m     \u001b[0mbiblioteca\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mselect\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m   1175\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1176\u001b[0m             )\n\u001b[0;32m-> 1177\u001b[0;31m         return self._input_request(\n\u001b[0m\u001b[1;32m   1178\u001b[0m             \u001b[0mstr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mprompt\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1179\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"shell\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m   1217\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1218\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1219\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1220\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1221\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
-          ]
-        }
-      ],
-      "source": [
-        "def ex1():\n",
-        "  notas = []\n",
-        "  for i in range(5):\n",
-        "    notas.append(float(input('Digite a nota: ')))\n",
-        "  print(f'A média das notas é {sum(notas)/len(notas)}')\n",
-        "def ex2():\n",
-        "  numeros = []\n",
-        "  for i in range(10):\n",
-        "    numeros.append(int(input('Digite um número')))\n",
-        "  maior = max(numeros)\n",
-        "  menor = min(numeros)\n",
-        "  locmaior = numeros.index(maior)\n",
-        "  locmenor = numeros.index(menor)\n",
-        "  print(f'O maior número é {maior} e está na posição {locmaior+1}')\n",
-        "  print(f'O menor número é {menor} e está na posição {locmenor+1}')\n",
-        "#esse exercício possui um problema no loop da tratativa de erro de localização de número e na localização dos números.\n",
-        "def ex3():\n",
-        "  vetor = []\n",
-        "  while True:\n",
-        "    try:\n",
-        "      numero = float(input('Insira um número para adicionar ao vetor, caso deseje parar de inserir digite uma letra: '))\n",
-        "      vetor.append(numero)\n",
-        "      continue\n",
-        "    except ValueError:\n",
-        "      break\n",
-        "  procurar = float(input('Insira o número que deseja buscar no vetor:'))\n",
-        "  if procurar in vetor:\n",
-        "    correspondencias = 0\n",
-        "    correspondencias = vetor.count(procurar)\n",
-        "    loc = vetor.index(procurar)\n",
-        "    print(f'Foram encontrados {correspondencias} correspondencias no vetor, localizadas nas posições {loc}.')\n",
-        "  else:\n",
-        "    procurar = float(input('numero não encontrado no vetor, por favor digite outro: '))\n",
-        "\n",
-        "def ex4():\n",
-        "  print()\n",
-        "def ex5():\n",
-        "  print()\n",
-        "def ex6():\n",
-        "  print()\n",
-        "def ex7():\n",
-        "  print()\n",
-        "\n",
-        "\n",
-        "biblioteca = {\n",
-        "    1: ex1,\n",
-        "    2: ex2,\n",
-        "    3: ex3,\n",
-        "    4: ex4,\n",
-        "    5: ex5,\n",
-        "    6: ex6,\n",
-        "    7: ex7\n",
-        "}\n",
-        "while True:\n",
-        "  select = int(input('Selecione o exercício que deseja rodar: '))\n",
-        "  if select in biblioteca:\n",
-        "    biblioteca[select]()\n",
-        "  else:\n",
-        "    print('Exercício não encontrado')"
-      ]
-    }
-  ]
+def ex1():
+  notas = []
+  for i in range(5):
+    notas.append(float(input('Digite a nota: ')))
+  print(f'A média das notas é {sum(notas)/len(notas)}')
+def ex2():
+  numeros = []
+  for i in range(10):
+    numeros.append(int(input('Digite um número')))
+  maior = max(numeros)
+  menor = min(numeros)
+  locmaior = numeros.index(maior)
+  locmenor = numeros.index(menor)
+  print(f'O maior número é {maior} e está na posição {locmaior+1}')
+  print(f'O menor número é {menor} e está na posição {locmenor+1}')
+#esse exercício possui um problema no loop da tratativa de erro de localização de número e na localização dos números.
+def ex3():
+  vetor = []
+  while True:
+    try:
+      numero = float(input('Insira um número para adicionar ao vetor, caso deseje parar de inserir digite uma letra: '))
+      vetor.append(numero)
+      continue
+    except ValueError:
+      break
+  procurar = float(input('Insira o número que deseja buscar no vetor:'))
+  if procurar in vetor:
+    correspondencias = 0
+    correspondencias = vetor.count(procurar)
+    loc = vetor.index(procurar)
+    print(f'Foram encontrados {correspondencias} correspondencias no vetor, localizadas nas posições {loc}.')
+  else:
+    procurar = float(input('numero não encontrado no vetor, por favor digite outro: '))
+
+def ex4():
+  vetorA = [1, 0, 5, -2, -5, 7]
+  vetorB = [2, 3, 0, -7, 6, 8]
+  vetorC = []
+  vetorC = vetorA + vetorB
+  print(f'Vetor C: {vetorC}')
+def ex5():
+  meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+  numeromeses = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+  for i in range(12):
+    print(f'{numeromeses[i]} - {meses[i]}')
+
+def ex6():
+  notas = [float(input('Digite a nota do aluno: ')) for i in range(10)]
+  media = sum(notas)/len(notas)
+  maiorquemedia = [nota for nota in notas if nota > media]
+  print(f'A média das notas é {media:.2f}')
+  if maiorquemedia:
+    print(f'No total são {len(maiorquemedia)} notas maior que a média')
+def ex7():
+  vetorA = [1, 0, 5, -2, -5, 7]
+  vetorB = [2, 3, 0, -7, 6, 8]
+  vetorC = []
+  vetorC = [vetorA[i] * vetorB[i] for i in range(len(vetorA))]
+  print(vetorC)
+biblioteca = {
+    1: ex1,
+    2: ex2,
+    3: ex3,
+    4: ex4,
+    5: ex5,
+    6: ex6,
+    7: ex7
 }
+while True:
+  select = int(input('Selecione o exercício que deseja rodar: '))
+  if select in biblioteca:
+    biblioteca[select]()
+  else:
+    print('Exercício não encontrado')
