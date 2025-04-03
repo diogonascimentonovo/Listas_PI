@@ -13,7 +13,6 @@ def ex2():
   locmenor = numeros.index(menor)
   print(f'O maior número é {maior} e está na posição {locmaior+1}')
   print(f'O menor número é {menor} e está na posição {locmenor+1}')
-#esse exercício possui um problema no loop da tratativa de erro de localização de número e na localização dos números.
 def ex3():
   vetor = []
   while True:
@@ -31,7 +30,6 @@ def ex3():
     print(f'Foram encontrados {correspondencias} correspondencias no vetor, localizadas nas posições {loc}.')
   else:
     procurar = float(input('numero não encontrado no vetor, por favor digite outro: '))
-
 def ex4():
   vetorA = [1, 0, 5, -2, -5, 7]
   vetorB = [2, 3, 0, -7, 6, 8]
@@ -43,7 +41,6 @@ def ex5():
   numeromeses = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
   for i in range(12):
     print(f'{numeromeses[i]} - {meses[i]}')
-
 def ex6():
   notas = [float(input('Digite a nota do aluno: ')) for i in range(10)]
   media = sum(notas)/len(notas)
