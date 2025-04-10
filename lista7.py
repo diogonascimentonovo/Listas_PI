@@ -59,9 +59,43 @@ def ex5():
         return max(vetor)    
     print(f'O MDC de {a} e {b} é {mdc(a,b)}')
 def ex6():
-    matriza = []
-    matrizb = []
-    for 
+    def ex6():
++    def lermatriz():
++        matrizA = []
++        matrizB = []
++        while True:
++            n = int(input('Insira quantas linhas deseja nas matrizes: '))
++            if n<1:
++                print('A quantidade de linhas deve ser pelo menos 1! ')
++                continue
++            else: break
++        while True:
++            m = int(input('Insira quantas colunas deseja nas matrizes: '))
++            if m<1:
++                print('A quantidade de colunas deve ser pelo menos 1! ')
++                continue
++                print('A quantidade de colunas deve ser pelo menos 1! ')
++                continue
++                continue
++            else: break
++        for i in range(n):
++            linhas = []
++            for j in range(m):
++                linhas.append(random.randint(1,10))
++            matrizA.append(linhas)
++        for i in range(n):
++            linhas = []
++            for j in range(m):
++                linhas.append(random.randint(1,10))
++            matrizB.append(linhas)
++            return matrizA,matrizB
++    matrizes = lermatriz()
++    def imprimirmatriz(matrizes):
++        for linhas in matrizes:
++            return linhas
++    impressao = imprimirmatriz(matrizes)
++    print(impressao)
+            def somar()
 globals_copy = globals().copy()
 biblioteca = {}
 for name, obj in globals_copy.items():
