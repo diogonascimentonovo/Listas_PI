@@ -59,43 +59,31 @@ def ex5():
         return max(vetor)    
     print(f'O MDC de {a} e {b} é {mdc(a,b)}')
 def ex6():
-    def ex6():
-+    def lermatriz():
-+        matrizA = []
-+        matrizB = []
-+        while True:
-+            n = int(input('Insira quantas linhas deseja nas matrizes: '))
-+            if n<1:
-+                print('A quantidade de linhas deve ser pelo menos 1! ')
-+                continue
-+            else: break
-+        while True:
-+            m = int(input('Insira quantas colunas deseja nas matrizes: '))
-+            if m<1:
-+                print('A quantidade de colunas deve ser pelo menos 1! ')
-+                continue
-+                print('A quantidade de colunas deve ser pelo menos 1! ')
-+                continue
-+                continue
-+            else: break
-+        for i in range(n):
-+            linhas = []
-+            for j in range(m):
-+                linhas.append(random.randint(1,10))
-+            matrizA.append(linhas)
-+        for i in range(n):
-+            linhas = []
-+            for j in range(m):
-+                linhas.append(random.randint(1,10))
-+            matrizB.append(linhas)
-+            return matrizA,matrizB
-+    matrizes = lermatriz()
-+    def imprimirmatriz(matrizes):
-+        for linhas in matrizes:
-+            return linhas
-+    impressao = imprimirmatriz(matrizes)
-+    print(impressao)
-            def somar()
+    '''EPS:
+    Processamento: ler matrizes, somar matrizes e imprimir matrizes'''
+    m = int(input('Insira a quantidade de linhas desejadas nas matrizes: '))
+    n = int(input('Insira a quantidade de colunas desejadas nas matrizes: '))
+    matriza = []
+    matrizb = []
+    for i in range (m):
+        linhasa = []
+        linhasb = []
+        for j in range(n):
+            linhasa.append(random.radint(10))
+            linhasb.append(random.randint(10))
+        matriza.append(linhasa)
+        matrizb.append(linhasb)
+
+    quantidade = int(input('Insira a quantidade de matrizes que deseja criar'))
+    def contruirmatrizes(quantidade):
+        for i in range(quantidade):
+            for j in range(m):
+                linha = []
+                
+    matrizes = 
+    def lermatrizes(matrizes):
+        for linha in matr
+
 globals_copy = globals().copy()
 biblioteca = {}
 for name, obj in globals_copy.items():
