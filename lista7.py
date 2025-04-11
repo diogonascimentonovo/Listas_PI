@@ -1,4 +1,5 @@
 import re
+import random
 def ex1():
     n1 = int(input('Insira o primeiro número: '))
     n2 = int(input('Insira o segundo número: '))
@@ -61,29 +62,44 @@ def ex5():
 def ex6():
     '''EPS:
     Processamento: ler matrizes, somar matrizes e imprimir matrizes'''
-    m = int(input('Insira a quantidade de linhas desejadas nas matrizes: '))
-    n = int(input('Insira a quantidade de colunas desejadas nas matrizes: '))
-    matriza = []
-    matrizb = []
-    for i in range (m):
-        linhasa = []
-        linhasb = []
-        for j in range(n):
-            linhasa.append(random.radint(10))
-            linhasb.append(random.randint(10))
-        matriza.append(linhasa)
-        matrizb.append(linhasb)
+    def construirmatrizes():
+        m = int(input('Insira a quantidade de linhas desejadas nas matrizes: '))
+        n = int(input('Insira a quantidade de colunas desejadas nas matrizes: '))
+        mb = []
+        ma = []
+        for i in range (m):
+            linhasa = []
+            linhasb = []
+            for j in range(n):
+                linhasa.append(random.randint(0,10))
+                linhasb.append(random.randint(0,10))
+            ma.append(linhasa)
+            mb.append(linhasb)
+        return ma,mb
+    
+    def imprimirmatrizes(ma,mb):
+        print('A matriz A é: ')
+        for x in ma:
+            print(x)
+        print('A matriz B é: ')
+        for y in mb:
+            print(y)
 
-    quantidade = int(input('Insira a quantidade de matrizes que deseja criar'))
-    def contruirmatrizes(quantidade):
-        for i in range(quantidade):
-            for j in range(m):
-                linha = []
-                
-    matrizes = 
-    def lermatrizes(matrizes):
-        for linha in matr
+    def somarmatrizes(ma,mb):
+        matrizc = []
+        for i in range(len(ma)):
+            linhasc = []
+            for j in range(len(ma[0])):
+                linhasc.append(ma[i][j]+mb[i][j])
+            matrizc.append(linhasc)
+        print('A matriz C é: ')
+        for z in matrizc:
+            print(z)
 
+    ma,mb = construirmatrizes()
+    imprimirmatrizes(ma,mb)
+    somarmatrizes(ma,mb)
+            
 globals_copy = globals().copy()
 biblioteca = {}
 for name, obj in globals_copy.items():
@@ -97,7 +113,6 @@ while True:
     if select == 0:
         print("Saindo...")
         break
-
     if select in biblioteca:
         biblioteca[select]()  
     else:
