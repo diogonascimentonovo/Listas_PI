@@ -32,24 +32,29 @@ def ex2():
     def cadastrarmercadoria():
         produto = []
         codigo = int(input('Insira o código do produto: '))#0
-        descricao = str(input('Insira a descrição do produto'))#1
+        descricao = str(input('Insira a descrição do produto: '))#1
         quantidade = int(input('Insira o quantidade do produto: '))#2
-        precounitario = float(input('Insira o preço unitário do produto:')) #3
+        precounitario = float(input('Insira o preço unitário do produto: ')) #3
         produto = [codigo,descricao,quantidade,precounitario]
         estoque.append(produto)
 
         
     def consultarmercadoria():
         codetosearch = int(input('Insira o código do produto a ser buscado no sistema:  ')) 
-        for i in range(len(estoque)):
-            if estoque[i][0] == codetosearch:
-                print(i)
+        for produto in estoque:
+            if produto[0] == codetosearch:
+                print(f'''O código procurado foi encontrado!
+                descrição: {produto[1]},
+                quantidade no estoque: {produto[2]}
+                preço atual: {produto[3]}''')
+            else:
+                print('Produto não encontrado, verifique o código digitado.')
     def valortotal():
-        for i in range(len(estoque)):
+        somatotal = 0
+        for i  in range(len(estoque)):
             somaproduto = estoque[i][2] * estoque[i][3]
-            somatotal = 0
             somatotal += somaproduto
-            print(somatotal)
+        print(f' O valor total do estoque é {somatotal}')
     #opção de menu
     while True:
         option = int(input('''Insira a opção desejada:
@@ -57,7 +62,9 @@ def ex2():
         [2] - Consultar mercadoria
         [3] - Valor total em mercadorias
         [4] - Sair
-        >>>'''))
+        >>>
+        
+        '''))
         if option == 4:
             break
         elif option ==1:
