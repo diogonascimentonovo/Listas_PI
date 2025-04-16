@@ -2,7 +2,7 @@ import re
 def ex1():
     x = float(input('Insira o primeiro número da operação: '))
     while True:
-        inputoperação = input('''Insira a operação que deseja realizar com o próximo número:
+        inputoperacao = input('''Insira a operação que deseja realizar com o próximo número:
         [SOMA]: Digite "+"
         [MULTIPLICAÇÃO]: Digite "x"
         [DIVISÃO]: Digite "/"
@@ -10,7 +10,7 @@ def ex1():
 
         ''')
         operadorespossiveis = (('-'),('+'),('x'),('/'))
-        if inputoperação not in operadorespossiveis:
+        if inputoperacao not in operadorespossiveis:
             print('Operação inválida! Insira alguma das opções da lista: ')
             continue
         else: break
@@ -19,11 +19,11 @@ def ex1():
     multiplica = lambda x,y: x*y
     subtrai = lambda x,y: x-y
     divide = lambda x,y: x/y
-    if inputoperação == '+':
+    if inputoperacao == '+':
         print(soma(x,y))
-    elif inputoperação == '-':
+    elif inputoperacao == '-':
         print(subtrai(x,y))
-    elif inputoperação == 'x':
+    elif inputoperacao == 'x':
         print(multiplica(x,y))
     else: print(divide(x,y))
 
