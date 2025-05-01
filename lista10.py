@@ -13,33 +13,56 @@ def ex2():
     print(lista3)
 
 def ex3():
-        try:
-            with open('pares.txt', 'r') as arquivospares:
-                pares = [int(linha.strip()) for linha in arquivospares if linha.strip().isdigit()]
-            with open('impares.txt', 'r') as arquivosimpares:
-                impares = [int(linha.strip()) for linha in arquivosimpares if linha.strip().isdigit()]
-            
-            total = pares + impares
-            total.sort()
+    try:
+        with open('pares.txt', 'r') as arquivospares:
+            pares = [int(linha.strip()) for linha in arquivospares if linha.strip().isdigit()]
+        with open('impares.txt', 'r') as arquivosimpares:
+            impares = [int(linha.strip()) for linha in arquivosimpares if linha.strip().isdigit()]
+        
+        total = pares + impares
+        total.sort()
 
-            with open('total.txt', 'w') as arquivoresultado:
-                for numero in total:
-                    arquivoresultado.write(f'{numero}\n')
+        with open('total.txt', 'w') as arquivoresultado:
+            for numero in total:
+                arquivoresultado.write(f'{numero}\n')
 
-            print(f'\nFeito! Arquivo total.txt criado!\n\nConteúdo do arquivo:')
-            
-            with open('total.txt', 'r') as arquivoresultado:
-                for linha in arquivoresultado:
-                    print(linha.strip())
+        print(f'\nFeito! Arquivo total.txt criado!\n\nConteúdo do arquivo:')
+        
+        with open('total.txt', 'r') as arquivoresultado:
+            for linha in arquivoresultado:
+                print(linha.strip())
 
-        except FileNotFoundError as e:
-            print(f"Erro: {e}. Você precisa criar 'pares.txt' e 'impares.txt' primeiro!")
+    except FileNotFoundError as e:
+        print(f"Erro: {e}. Você precisa criar 'pares.txt' e 'impares.txt' primeiro!")
 
 def ex4():
-    print()
+    try:
+        with open('pares.txt', 'r') as arquivospares:
+            pares = [int(linha.strip()) for linha in arquivospares if linha.strip().isdigit()]
+        with open('impares.txt', 'r') as arquivosimpares:
+            impares = [int(linha.strip()) for linha in arquivosimpares if linha.strip().isdigit()]
+        total = pares + impares
+        total.sort(reverse = True)
+        with open('total.txt', 'w') as arquivoresultado:
+            for numero in total:
+                arquivoresultado.write(f'{numero}\n')
+
+        print(f'\nFeito! Arquivo total.txt criado!\n\nConteúdo do arquivo:')
+        
+        with open('total.txt', 'r') as arquivoresultado:
+            for linha in arquivoresultado:
+                print(linha.strip())
+
+    except FileNotFoundError as e:
+        print(f"Erro: {e}. Você precisa criar 'pares.txt' e 'impares.txt' primeiro!")
 
 def ex5():
-    print()
+    nomes = input("Digite os nomes separados por espaço: ").split()
+    nomes.sort()
+    with open("nomes.txt", "w") as arquivo:
+        for nome in nomes:
+            arquivo.write(f"{nome}\n")
+    print("Arquivo criado com sucesso!")
 
 
 globals_copy = globals().copy()
